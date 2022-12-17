@@ -4,6 +4,8 @@ let title = document.getElementById("title-input")
 let notes = document.getElementById("notes-input")
 let saveBtn = document.getElementById("save-btn")
 let display = document.getElementById("display-notes")
+let count = document.getElementById("notes_count")
+let input_field = document.getElementById("input_field")
 let empty_notes = document.getElementsByClassName("empty-notes")
 
 // Adding local storage items
@@ -51,8 +53,6 @@ saveBtn.addEventListener("click", (e) => {
 
         title.value = ""
         notes.value = ""
-
-
     }
 })
 
@@ -74,6 +74,7 @@ function showtodo() {
             </div>
         </div>
       `
+        count.innerText = TodoList.length
     }
     if (TodoList.length == 0) {
         display.innerHTML = "No saved Notes found!"
@@ -85,7 +86,6 @@ showtodo()
 
 //deleting note
 function removeTodo(index) {
-
     appTitle.style.display = "none"
     noti.style.display = "block"
     noti.innerText = `${TodoList[index].Title} has been deleted from your browser's local storage!`
@@ -96,7 +96,7 @@ function removeTodo(index) {
     TodoList.splice(index, 1)
     localStorage.setItem("TODOs", JSON.stringify(TodoList))
     showtodo();
-
+    count.innerText = TodoList.length
 }
 
 // editing note
@@ -107,40 +107,3 @@ function editTodo(index) {
     title.value = webTask[saved_index].Title
     notes.value = webTask[saved_index].Notes
 }
-
-
-
-
-
-
-
-
-
-/*
-
-
-
-let todo = {
-                    Title: title.value,
-                    Notes: notes.value
-                }
-                TodoList.push(todo)
-                localStorage.setItem("TODOs", JSON.stringify(TodoList))
-                showtodo()
-
-                saveBtn.innerText = "Save"
-
-                appTitle.style.display = "none"
-                noti.style.display = "block"
-                noti.innerText = `${title.value} has been saved in your browser's local storage!`
-                setTimeout(() => {
-                    appTitle.style.display = "block"
-                    noti.style.display = "none"
-                }, 5000)
-
-                title.value = ""
-                notes.value = ""
-
-
-
-*/
