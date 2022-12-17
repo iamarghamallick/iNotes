@@ -16,19 +16,20 @@
         <div class="heading" id="heading">iNotes</div>
         <div class="heading" id="notification">Notification</div>
     </div>
-
-    <div class="title">
-        <p>Title</p>
-        <input id="title-input" type="text" placeholder="Enter title">
-    </div>
-    <div class="notes">
-        <p>Notes</p>
-        <textarea id="notes-input" type="text" placeholder="Enter your notes"></textarea>
+    <div id="input_field">
+        <div class="title">
+            <p>Title</p>
+            <input id="title-input" type="text" placeholder="Enter title">
+        </div>
+        <div class="notes">
+            <p>Notes</p>
+            <textarea id="notes-input" type="text" placeholder="Enter your notes"></textarea>
+        </div>
     </div>
     <button id="save-btn" class="btn">Save</button>
     <button id="edit_and_save-btn" class="btn">Update</button>
 
-    <div class="saved-heading">Saved Notes</div>
+    <div class="saved-heading">Saved Notes (<span id="notes_count">0</span>)</div>
 
     <div id="display-notes">
         <!-- <div class="show-items">
@@ -42,10 +43,12 @@
             </div>
         </div> -->
     </div>
-    
+
+
     <footer class="footer-tag">
-        <p>2022 &copy; <a href="https://github.com/iamarghamallick" target="_blank">Argha Mallick</a></p>
+        <p>2022 &copy; <a href="https://in.linkedin.com/in/argha-mallick-8b81251a3" target="_blank">Argha Mallick</a></p>
     </footer>
+
 
     <script src="https://kit.fontawesome.com/db5c83b01d.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
