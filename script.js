@@ -33,9 +33,12 @@ saveBtn.addEventListener("click", (e) => {
         }, 3000)
     }
     else {
+        let d = new Date()
+        let saving_time = `Saved on ${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()} at ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
         let todo = {
             Title: title.value,
-            Notes: notes.value
+            Notes: notes.value,
+            Time: saving_time
         }
         TodoList.push(todo)
         localStorage.setItem("TODOs", JSON.stringify(TodoList))
@@ -62,6 +65,7 @@ function showtodo() {
     for (index = 0; index < TodoList.length; index++) {
         let TitleContent = TodoList[index].Title
         let NotesContent = TodoList[index].Notes
+        let SavingTime = TodoList[index].Time
         todos += `
         <div class="show-items">
             <div id="saved-title">
@@ -71,6 +75,9 @@ function showtodo() {
             <div id="saved-notes">
                 <p>${NotesContent}</p>
                 <i class='far fa-edit' onclick="editTodo(${index})"></i>
+            </div>
+            <div id="saved-time">
+                <h6>${SavingTime}</h6>
             </div>
         </div>
       `
