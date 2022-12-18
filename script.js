@@ -34,7 +34,7 @@ saveBtn.addEventListener("click", (e) => {
     }
     else {
         let d = new Date()
-        let saving_time = `Saved on ${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()} at ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+        let saving_time = `Saved on ${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()} at ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()} IST`
         let todo = {
             Title: title.value,
             Notes: notes.value,
