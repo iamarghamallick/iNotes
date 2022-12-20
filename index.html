@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>iNotes | Save your ToDos</title>
+</head>
+
+<body>
+    <div class="title-bar">
+        <div class="heading" id="heading">iNotes</div>
+        <div class="heading" id="notification">Notification</div>
+    </div>
+    <button id="add-new">Add New <i class="fa fa-angle-down"></i></button>
+    <div id="input-content">
+        <div id="input_field">
+            <div class="title">
+                <p>Title</p>
+                <input id="title-input" type="text" placeholder="Enter title">
+            </div>
+            <div class="notes">
+                <p>Notes</p>
+                <textarea id="notes-input" type="text" placeholder="Enter your notes"></textarea>
+            </div>
+        </div>
+
+        <button id="save-btn" class="btn">Save</button>
+        <button id="edit_and_save-btn" class="btn">Update</button>
+
+    </div>
+
+    <div class="saved-heading">Saved Notes (<span id="notes_count">0</span>)</div>
+
+    <div id="display-notes">
+        <!-- <div class="show-items">
+            <div id="saved-title">
+                <h3>Title</h3>
+                <i class="fa fa-trash" onclick="removeTodo()"></i>
+            </div>
+            <div id="saved-notes">
+                <p>No saved notes found!</p>
+                <i class='far fa-edit' onclick="editTodo()"></i>
+            </div>
+            <div id="saved-time">
+                <h6>Saving Time</h6>
+            </div>
+        </div> -->
+    </div>
+
+
+
+    <!-- footer  -->
+    <footer class="footer-tag">
+        <p>Made by &copy; <a href="https://in.linkedin.com/in/argha-mallick-8b81251a3" target="_blank">Argha Mallick</a>
+        </p>
+    </footer>
+
+
+    <script src="https://kit.fontawesome.com/db5c83b01d.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
